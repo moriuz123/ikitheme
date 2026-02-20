@@ -1,0 +1,19 @@
+code .gitignore
+```
+
+VSCode akan membuka file baru, isi dengan:
+```
+# Dependencies
+node_modules/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build files
+*.log
+.cache/
+
+# WordPress specific
+*.sql
+*.zip
