@@ -3,8 +3,298 @@ Theme Name: Ikitheme
 Theme URI: http://belajar.kie:8080/
 Author: moriuz123
 Author URI: https://github.com/moriuz123
-Description: Belajar membuat WordPress theme dari nol
+Description: kitest
 Version: 1.0.0
 License: GNU General Public License v2 or later
 Text Domain: ikitheme
 */
+
+/* ===========================
+   RESET & BASE
+=========================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background: #f9f9f9;
+}
+
+a {
+  color: #0073aa;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #005177;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.site-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+}
+
+.site-description {
+  font-size: 13px;
+  color: #999;
+}
+
+/* ===========================
+   NAVIGASI
+=========================== */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+}
+
+.nav-menu a:hover {
+  color: #0073aa;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+.site-main {
+  padding: 40px 0;
+}
+
+/* ===========================
+   POSTS GRID
+=========================== */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+article {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease;
+}
+
+article:hover {
+  transform: translateY(-4px);
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.post-content {
+  padding: 20px;
+}
+
+.post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post-title a {
+  color: #333;
+}
+
+.post-title a:hover {
+  color: #0073aa;
+}
+
+.post-meta {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 15px;
+}
+
+.post-excerpt {
+  font-size: 14px;
+  color: #666;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0073aa;
+}
+
+/* ===========================
+   SINGLE POST & PAGE
+=========================== */
+.post-title,
+.page-title {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.post-content,
+.page-content {
+  margin-top: 20px;
+  line-height: 1.8;
+}
+
+.post-navigation {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===========================
+   PAGINATION
+=========================== */
+.pagination {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.page-numbers {
+  display: inline-block;
+  padding: 8px 14px;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  color: #333;
+}
+
+.page-numbers.current {
+  background: #0073aa;
+  color: #fff;
+  border-color: #0073aa;
+}
+
+/* ===========================
+   404
+=========================== */
+.error-404 {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.error-title {
+  font-size: 120px;
+  color: #0073aa;
+  line-height: 1;
+}
+
+.btn-home {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #0073aa;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-home:hover {
+  background: #005177;
+  color: #fff;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.site-footer {
+  background: #333;
+  color: #ccc;
+  padding: 30px 0;
+  margin-top: 60px;
+}
+
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-menu a {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.footer-menu a:hover {
+  color: #fff;
+}
+
+.footer-info p {
+  font-size: 14px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+  .site-header .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+}
