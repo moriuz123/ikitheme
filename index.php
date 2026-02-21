@@ -1,2 +1,2 @@
 <?php
-// Silence is golden - fallback template
+// Silence is golden - fallback templategit
