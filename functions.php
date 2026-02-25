@@ -103,4 +103,34 @@ function ikitheme_widgets()
         'before_title'  => '<h3 class="widget-title">',
         'after_title'   => '</h3>',
     ));
+    // 6. CUSTOM POST TYPE — PORTFOLIO
+    add_action('init', 'ikitheme_register_cpt');
+
+    function ikitheme_register_cpt()
+    {
+        register_post_type('portfolio', array(
+            'labels' => array(
+                'name'               => 'Portfolio',
+                'singular_name'      => 'Portfolio',
+                'add_new'            => 'Tambah Baru',
+                'add_new_item'       => 'Tambah Portfolio Baru',
+                'edit_item'          => 'Edit Portfolio',
+                'view_item'          => 'Lihat Portfolio',
+                'all_items'          => 'Semua Portfolio',
+                'search_items'       => 'Cari Portfolio',
+                'not_found'          => 'Portfolio tidak ditemukan',
+            ),
+            'public'        => true,
+            'has_archive'   => true,
+            'menu_icon'     => 'dashicons-portfolio',
+            'menu_position' => 5,
+            'supports'      => array(
+                'title',
+                'editor',
+                'thumbnail',
+                'excerpt',
+            ),
+            'rewrite'       => array('slug' => 'portfolio'),
+        ));
+    }
 }
