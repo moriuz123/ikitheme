@@ -79,3 +79,28 @@ function ikitheme_remove_version()
 {
     return '';
 }
+// 5. DAFTARKAN SIDEBAR
+add_action('widgets_init', 'ikitheme_widgets');
+
+function ikitheme_widgets()
+{
+    register_sidebar(array(
+        'name'          => 'Sidebar Utama',
+        'id'            => 'sidebar-utama',
+        'description'   => 'Tambahkan widget di sini',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ));
+
+    register_sidebar(array(
+        'name'          => 'Sidebar Blog',
+        'id'            => 'sidebar-blog',
+        'description'   => 'Sidebar khusus halaman blog',
+        'before_widget' => '<div class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
+    ));
+}
