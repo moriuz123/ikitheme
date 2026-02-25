@@ -1,6 +1,4 @@
-<?php
-// Silence is golden - fallback templategit<?php get_header(); 
-?>
+<?php get_header(); ?>
 
 <main class="site-main">
     <div class="container">
