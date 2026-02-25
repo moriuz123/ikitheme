@@ -29,33 +29,9 @@ get_header(); ?>
 
         </div>
 
-        <!-- Kolom Kanan: Form Kontak -->
+        <!-- Kolom Kanan: Form dari Plugin -->
         <div class="contact-form">
-            <h2>Kirim Pesan</h2>
-
-            <form class="form-kontak" method="post">
-                <div class="form-group">
-                    <label for="nama">Nama Lengkap</label>
-                    <input type="text" id="nama" name="nama" placeholder="Nama kamu" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="email@kamu.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subjek">Subjek</label>
-                    <input type="text" id="subjek" name="subjek" placeholder="Subjek pesan">
-                </div>
-
-                <div class="form-group">
-                    <label for="pesan">Pesan</label>
-                    <textarea id="pesan" name="pesan" rows="6" placeholder="Tulis pesanmu di sini..." required></textarea>
-                </div>
-
-                <button type="submit" class="btn-submit">Kirim Pesan →</button>
-            </form>
+            <?php echo do_shortcode('[iki_contact_form]'); ?>
         </div>
 
     </div>
