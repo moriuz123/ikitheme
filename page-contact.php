@@ -11,14 +11,8 @@ get_header(); ?>
 <main class="site-main">
     <div class="contact-wrapper">
 
-        <!-- Kolom Kiri: Info Kontak -->
         <div class="contact-info">
-
             <h1 class="page-title"><?php the_title(); ?></h1>
-
-            <div class="page-content">
-                <?php the_content(); ?>
-            </div>
 
             <ul class="contact-details">
                 <li>📍 Jl. Contoh No. 123, Jakarta</li>
@@ -26,14 +20,12 @@ get_header(); ?>
                 <li>✉️ hello@ikitheme.com</li>
                 <li>🕐 Senin - Jumat, 09.00 - 17.00</li>
             </ul>
-
         </div>
 
         <!-- Kolom Kanan: Form dari Plugin -->
         <div class="contact-form">
             <?php echo do_shortcode('[iki_contact_form]'); ?>
         </div>
-
     </div>
 </main>
 
